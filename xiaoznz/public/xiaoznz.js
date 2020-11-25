@@ -1,0 +1,1 @@
+alert("你好，这里是xiaoznz.js")
