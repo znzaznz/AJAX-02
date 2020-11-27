@@ -21,7 +21,7 @@ var server = http.createServer(function(request, response){
 
     console.log('有个傻子发请求过来啦！路径（带查询参数）为：' + pathWithQuery)
 
-    if(path === '/' || path=== '/index'){
+    if(path === '/' || path=== '/index.html'){
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
         const  string = fs.readFileSync('./public/index.html')
@@ -34,11 +34,24 @@ var server = http.createServer(function(request, response){
         response.end()
     }else if (path === '/friends.json'){
         response.statusCode = 200;
+        // response.setHeader("Access-Control-Allow-Origin","http://hacker.com:8889") //CORS
+        // 有时候要面对没有CORS兼容IE的需求,此时用JSONP
+        // fs.readFileSync("")
         response.setHeader("Content-Type",'text/json,charset=utf-8');
         response.write(fs.readFileSync("./public/friends.json"))
         response.end()
-    }
-        else{
+    }else if (path === "/friends.js"){
+        response.statusCode = 200;
+        if (request.headers['referer'].indexOf("http://hacker.com:8889") !== -1){
+            response.setHeader('Content-Type',"text/javascript;charset=utf-8");
+            const string = 'window[{{name}}]({{data}})'
+            const data = fs.readFileSync("./public/friends.json").toString();
+            const string2 = string.replace('{{data}}',data).replace('{{name}}',query.callback)
+            response.write(string2)
+            response.end()
+        }
+
+    }else{
         response.statusCode = 404
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
         response.write(`你输入的路径不存在对应的内容`)
