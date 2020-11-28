@@ -33,25 +33,25 @@ var server = http.createServer(function(request, response){
         response.write(fs.readFileSync("./public/xiaoznz.js"))
         response.end()
     }else if (path === '/friends.json'){
+        // 重新复习一遍CORS和JSONP
+        // 首先是CORS,我们需要两个不同的服务器
+        // response.statusCode = 200;
+        // response.setHeader('Content-Type','text/json,charset="utf-8"')
+        // response.setHeader('Access-Control-Allow-Origin',"*")
+        // response.write(fs.readFileSync("./public/friends.json"))
+        // response.end()
+        // 用CORS的方法就实现了
+        // 此时用JSONP再来实现一遍
+        // 此时应该注意到，JSON是不能直接通过普通的协议获得的，于是我们用js绕过他来获得，我们先写一个friends.js
+    }else if (path === '/friends.js'){
         response.statusCode = 200;
-        // response.setHeader("Access-Control-Allow-Origin","http://hacker.com:8889") //CORS
-        // 有时候要面对没有CORS兼容IE的需求,此时用JSONP
-        // fs.readFileSync("")
-        response.setHeader("Content-Type",'text/json,charset=utf-8');
-        response.write(fs.readFileSync("./public/friends.json"))
+        response.setHeader('Content-Type','charset="utf-8"')
+        const data = fs.readFileSync('./public/friends.json')
+        let string = `window.xxx({{data}})`.replace('{{data}}',data).replace('xxx',query.callback)
+        response.write(string)
         response.end()
-    }else if (path === "/friends.js"){
-        response.statusCode = 200;
-        if (request.headers['referer'].indexOf("http://hacker.com:8889") !== -1){
-            response.setHeader('Content-Type',"text/javascript;charset=utf-8");
-            const string = 'window[{{name}}]({{data}})'
-            const data = fs.readFileSync("./public/friends.json").toString();
-            const string2 = string.replace('{{data}}',data).replace('{{name}}',query.callback)
-            response.write(string2)
-            response.end()
-        }
-
-    }else{
+    }
+    else{
         response.statusCode = 404
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
         response.write(`你输入的路径不存在对应的内容`)

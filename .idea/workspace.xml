@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bffc6937-50cb-4420-95ed-892d024e495a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/xiaoznz/public/friends.js" afterDir="false" />
+    <list default="true" id="bffc6937-50cb-4420-95ed-892d024e495a" name="Default Changelist" comment="建立两个server完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hacker/public/hacker.js" beforeDir="false" afterPath="$PROJECT_DIR$/hacker/public/hacker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hacker/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/hacker/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiaoznz/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xiaoznz/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xiaoznz/public/friends.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xiaoznz/public/xiaoznz.js" beforeDir="false" afterPath="$PROJECT_DIR$/xiaoznz/public/xiaoznz.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xiaoznz/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/xiaoznz/server.js" afterDir="false" />
     </list>
@@ -24,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="practice-JSONP-demo01" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
@@ -71,6 +74,11 @@
       <workItem from="1606312558882" duration="2057000" />
       <workItem from="1606316361379" duration="2927000" />
       <workItem from="1606464731794" duration="2756000" />
+      <workItem from="1606472313949" duration="265000" />
+      <workItem from="1606475257750" duration="54000" />
+      <workItem from="1606535931010" duration="5806000" />
+      <workItem from="1606562935935" duration="838000" />
+      <workItem from="1606564033621" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="建立两个server完成">
       <created>1606312332225</created>
@@ -85,30 +93,48 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="建立两个server完成" />
     <option name="LAST_COMMIT_MESSAGE" value="建立两个server完成" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="558" y="90" key="CommitChangelistDialog2" timestamp="1606312331535">
+    <state x="558" y="90" key="CommitChangelistDialog2" timestamp="1606545069029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="558" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606312331535" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606312302501">
+    <state x="558" y="90" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606545069029" />
+    <state x="97" y="100" width="1720" height="839" key="DiffContextDialog" timestamp="1606544482992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606312302501" />
+    <state x="97" y="100" width="1720" height="839" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606544482992" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606475310575">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606475310575" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1606310379562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606310379562" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606312337390">
+    <state x="801" y="216" key="VCS.ChangeListViewerDialog" timestamp="1606543181530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606312337390" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606316598872">
+    <state x="801" y="216" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606543181530" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606545071896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606316598872" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606545071896" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606542229694">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606542229694" />
   </component>
 </project>
